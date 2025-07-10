@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int valor = 42;
+    int *p;
+
+    p = &valor;
+
+    printf("Valor da variável: %d\n", *p);
+    printf("Endereço da variável: %p\n", p);
+
+    return 0;
+}
