@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void inverterSinal(int *valor) {
+    *valor = -(*valor);
+}
+
+int main() {
+    int numero;
+
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+
+    inverterSinal(&numero);
+    printf("Número com sinal invertido: %d\n", numero);
+
+    return 0;
+}
