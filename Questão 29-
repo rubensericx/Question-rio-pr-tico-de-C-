@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void verificarAluno(char nome[], float nota1, float nota2) {
+    float media = (nota1 + nota2) / 2.0;
+
+    printf("Aluno: %s\n", nome);
+    printf("Média: %.2f\n", media);
+
+    if (media >= 7.0)
+        printf("Situação: Aprovado\n");
+    else
+        printf("Situação: Reprovado\n");
+}
+
+int main() {
+    char nome[50];
+    float n1, n2;
+
+    printf("Digite o nome do aluno: ");
+    fgets(nome, sizeof(nome), stdin);
+
+    printf("Digite as duas notas: ");
+    scanf("%f %f", &n1, &n2);
+
+    verificarAluno(nome, n1, n2);
+
+    return 0;
+}
