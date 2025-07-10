@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2;
+
+    cout << "Digite dois numeros inteiros: ";
+    cin >> num1 >> num2;
+
+    cout << "Soma: " << num1 + num2 << endl;
+    cout << "Subtracao: " << num1 - num2 << endl;
+    cout << "Multiplicacao: " << num1 * num2 << endl;
+
+    if (num2 != 0)
+        cout << "Divisao: " << num1 / num2 << endl;
+    else
+        cout << "Divisao por zero nao permitida." << endl;
+
+    return 0;
+}
