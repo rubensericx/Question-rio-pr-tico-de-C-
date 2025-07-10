@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void alterar(int valor, int *referencia) {
+    valor = valor + 10;
+    *referencia = *referencia + 20;
+
+    printf("Dentro da função:\n");
+    printf("Valor por valor: %d\n", valor);
+    printf("Valor por referência: %d\n", *referencia);
+}
+
+int main() {
+    int a = 5, b = 10;
+
+    printf("Antes:\nValor: %d, Referência: %d\n", a, b);
+    alterar(a, &b);
+    printf("Depois:\nValor: %d, Referência: %d\n", a, b);
+
+    return 0;
+}
