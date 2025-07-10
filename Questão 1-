@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int inteiro = 10;
+    float decimalSimples = 3.14f;
+    double decimalDuplo = 2.718281828;
+    char caractere = 'A';
+    bool logico = true;
+
+    cout << "int: " << inteiro << endl;
+    cout << "float: " << decimalSimples << endl;
+    cout << "double: " << decimalDuplo << endl;
+    cout << "char: " << caractere << endl;
+    cout << "bool: " << logico << endl;
+
+    return 0;
+}
