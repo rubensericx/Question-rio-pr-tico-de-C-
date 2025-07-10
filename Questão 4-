@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int inteiro = 10 / 3;
+    float flutuante = 10.0f / 3.0f;
+    double duplo = 10.0 / 3.0;
+
+    cout << "Resultado com int: " << inteiro << endl;
+    cout << "Resultado com float: " << flutuante << endl;
+    cout << "Resultado com double: " << duplo << endl;
+
+    return 0;
+}
