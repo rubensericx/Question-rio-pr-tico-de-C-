@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int soma(int a, int b) {
+    return a + b;
+}
+
+int subtracao(int a, int b) {
+    return a - b;
+}
+
+int multiplicacao(int a, int b) {
+    return a * b;
+}
+
+void menu() {
+    int op, x, y;
+
+    printf("Escolha uma operação:\n");
+    printf("1 - Soma\n2 - Subtração\n3 - Multiplicação\n");
+    printf("Opção: ");
+    scanf("%d", &op);
+
+    printf("Digite dois números: ");
+    scanf("%d %d", &x, &y);
+
+    switch (op) {
+        case 1:
+            printf("Resultado da soma: %d\n", soma(x, y));
+            break;
+        case 2:
+            printf("Resultado da subtração: %d\n", subtracao(x, y));
+            break;
+        case 3:
+            printf("Resultado da multiplicação: %d\n", multiplicacao(x, y));
+            break;
+        default:
+            printf("Opção inválida!\n");
+    }
+}
+
+int main() {
+    menu();
+    return 0;
+}
