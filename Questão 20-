@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void verificarSituacao(char nome[], float nota) {
+    printf("Aluno: %s\n", nome);
+    if (nota >= 7.0)
+        printf("Situação: Aprovado\n");
+    else
+        printf("Situação: Reprovado\n");
+}
+
+int main() {
+    char nome[50];
+    float nota;
+
+    printf("Digite o nome do aluno: ");
+    fgets(nome, sizeof(nome), stdin);  // Lê até espaços
+    printf("Digite a nota: ");
+    scanf("%f", &nota);
+
+    verificarSituacao(nome, nota);
+
+    return 0;
+}
