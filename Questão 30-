@@ -1,0 +1,55 @@
+#pragma once
+
+// Função com passagem por valor
+int dobrar(int x);
+
+// Função com passagem por referência (via ponteiro)
+void inverterSinal(int *x);
+
+// Função com ponteiro para string e valor
+void exibirAluno(char *nome, float nota);
+
+
+#include <stdio.h>
+#include "funcoes.h"
+
+// Passagem por valor
+int dobrar(int x) {
+    return x * 2;
+}
+
+// Passagem por referência (via ponteiro)
+void inverterSinal(int *x) {
+    *x = -(*x);
+}
+
+// Uso de ponteiros (nome como ponteiro para char)
+void exibirAluno(char *nome, float nota) {
+    printf("Aluno: %s\n", nome);
+    printf("Nota: %.2f\n", nota);
+}
+
+
+#include <stdio.h>
+#include "funcoes.h"
+
+int main() {
+    int numero = 5;
+    int valor = -20;
+    char nome[] = "Ana";
+    float nota = 8.7;
+
+    // Passagem por valor
+    int resultado = dobrar(numero);
+    printf("Dobro de %d é %d\n", numero, resultado);
+
+    // Passagem por referência (via ponteiro)
+    printf("Valor antes de inverter: %d\n", valor);
+    inverterSinal(&valor);
+    printf("Valor depois de inverter: %d\n", valor);
+
+    // Uso de ponteiros com string
+    exibirAluno(nome, nota);
+
+    return 0;
+}
