@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+float maior(float a, float b) {
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+
+int main() {
+    float num1, num2;
+    
+    printf("Digite dois números: ");
+    scanf("%f %f", &num1, &num2);
+    
+    printf("Maior número: %.2f\n", maior(num1, num2));
+    
+    return 0;
+}
