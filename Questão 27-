@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+float saldo = 0.0;
+
+void consultarSaldo() {
+    printf("Saldo atual: R$ %.2f\n", saldo);
+}
+
+void depositar(float valor) {
+    saldo += valor;
+    printf("Depósito de R$ %.2f realizado.\n", valor);
+}
+
+void sacar(float valor) {
+    if (valor > saldo) {
+        printf("Saldo insuficiente!\n");
+    } else {
+        saldo -= valor;
+        printf("Saque de R$ %.2f realizado.\n", valor);
+    }
+}
+
+int main() {
+    int op;
+    float valor;
+
+    printf("Digite o saldo inicial: R$ ");
+    scanf("%f", &saldo);
+
+    do {
+        printf("\n1 - Consultar saldo\n2 - Depositar\n3 - Sacar\n0 - Sair\nOpção: ");
+        scanf("%d", &op);
+
+        switch (op) {
+            case 1:
+                consultarSaldo();
+                break;
+            case 2:
+                printf("Valor para depósito: R$ ");
+                scanf("%f", &valor);
+                depositar(valor);
+                break;
+            case 3:
+                printf("Valor para saque: R$ ");
+                scanf("%f", &valor);
+                sacar(valor);
+                break;
+            case 0:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opção inválida!\n");
+        }
+
+    } while (op != 0);
+
+    return 0;
+}
